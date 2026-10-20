@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-skill-evals"
+version = "0.1.0"
+description = "3-Arm Evaluation Harness & Quality Linter for AI Agent Skills"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Sanjeev", email = "sanjeev@local"}
+]
+keywords = ["ai-agents", "evaluation", "skills", "evals", "prompt-engineering", "benchmarks"]
+dependencies = []
+
+[project.scripts]
+skill-eval = "src.eval_skill:main"
+skill-lint = "src.lint_skill:main"
+skill-audit = "src.audit_suite:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
