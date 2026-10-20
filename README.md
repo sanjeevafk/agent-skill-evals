@@ -6,9 +6,11 @@
 
 A quantitative, multi-arm evaluation harness and pre-activation quality gate for AI agent skills (`SKILL.md`). Built on the research principles of **Sergii Makarevych (2026)** and the **Poteto Verification Playbooks**.
 
+Integrated with the [**`sanjeevafk/agent-skills`**](https://github.com/sanjeevafk/agent-skills) repository ecosystem as a canonical quality gate.
+
 ---
 
-## 🎯 The Problem
+## The Problem
 
 Over a million agent skills exist in public registries, but the vast majority are **"vibe-written"**: authored by intuition, untested on empirical tasks, and never benchmarked against a control group. 
 
@@ -21,7 +23,7 @@ Published studies reveal:
 
 ---
 
-## 🔬 The 3-Arm Evaluation Protocol
+## The 3-Arm Evaluation Protocol
 
 ```
                         ┌──────────────┐
@@ -73,7 +75,7 @@ Published studies reveal:
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### 1. Installation
 Clone the repository and install locally:
@@ -91,8 +93,8 @@ skill-lint path/to/SKILL.md
 
 Checks performed:
 * **Spec Conformance:** Valid YAML frontmatter with `name` and actionable `description`.
-* **Directive Density:** Requires $\ge 1.5\text{ directives/KB}$. Flags conversational narrative fluff as rejected.
-* **Budget Limits:** Flags files $> 20\text{ KB}$ to prevent stealth prompt bloat.
+* **Directive Density:** Requires >= 1.5 directives/KB. Flags conversational narrative fluff as rejected.
+* **Budget Limits:** Flags files > 20 KB to prevent stealth prompt bloat.
 * **Security Screening:** Checks for unvetted `curl|sh`, plain-text credentials, and destructive file operations.
 
 ### 3. Running a 3-Arm Evaluation
@@ -103,7 +105,7 @@ skill-eval <skill_name_or_path> --prompt "Implement a thread-safe sliding window
 Output:
 ```
 ============================================================
-📊 EVALUATION SCORECARD: poteto-mode
+EVALUATION SCORECARD: poteto-mode
 ============================================================
 Skill Size:      19,303 chars (~4,825 tokens)
 Directives:      72 extracted test points
@@ -126,7 +128,7 @@ skill-audit
 
 ---
 
-## 🛠️ CLI Reference
+## CLI Reference
 
 | Command | Script | Description |
 | :--- | :--- | :--- |
@@ -136,8 +138,9 @@ skill-audit
 
 ---
 
-## 📜 References & Direct Links
+## References & Direct Links
 
+* **Agent Skills Repository:** [sanjeevafk/agent-skills](https://github.com/sanjeevafk/agent-skills).
 * **Sergii Makarevych (2026):** [*How to write and test agent skills with evals*](https://x.com/sermakarevich/status/2112198653469241856) (Full Article on X: [x.com/i/article/2112186374052802560](https://x.com/i/article/2112186374052802560)).
 * **Agent Skills Specification:** [agentskills.io/specification](https://agentskills.io/specification).
 * **Anthropic Plugin & Skill Evals:** [Claude Code Documentation: Plugin Evals](https://code.claude.com/docs/en/plugin-evals).
