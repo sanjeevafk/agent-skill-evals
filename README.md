@@ -130,13 +130,21 @@ skill-audit
 
 | Command | Script | Description |
 | :--- | :--- | :--- |
-| `skill-lint <target>` | `src/lint_skill.py` | Validates frontmatter, directive density, and security constraints. |
-| `skill-eval <target>` | `src/eval_skill.py` | Scaffolds and grades 3-arm sandboxes against an organic task. |
-| `skill-audit` | `src/audit_suite.py` | Bulk audits active skills in `~/.gemini/config/skills`. |
+| `skill-lint <target>` | [`src/lint_skill.py`](src/lint_skill.py) | Validates frontmatter, directive density, and security constraints. |
+| `skill-eval <target>` | [`src/eval_skill.py`](src/eval_skill.py) | Scaffolds and grades 3-arm sandboxes against an organic task. |
+| `skill-audit` | [`src/audit_suite.py`](src/audit_suite.py) | Bulk audits active skills in `~/.gemini/config/skills`. |
 
 ---
 
-## 📜 References
-* Makarevych, S. (2026). *How to write and test agent skills with evals*.
-* Poteto Mode Playbooks (`eval.md`, `shipping.md`).
-* Agent Skills Specification: `https://agentskills.io/specification`
+## 📜 References & Direct Links
+
+* **Sergii Makarevych (2026):** [*How to write and test agent skills with evals*](https://x.com/sermakarevich/status/2112198653469241856) (Full Article on X: [x.com/i/article/2112186374052802560](https://x.com/i/article/2112186374052802560)).
+* **Agent Skills Specification:** [agentskills.io/specification](https://agentskills.io/specification).
+* **Anthropic Plugin & Skill Evals:** [Claude Code Documentation: Plugin Evals](https://code.claude.com/docs/en/plugin-evals).
+* **Poteto Mode & pstack Playbooks:** [Cursor Plugins Repository: `pstack`](https://github.com/cursor/plugins/tree/main/pstack).
+* **Vercel Engineering Study:** [*AGENTS.md outperforms skills in our agent evals*](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals).
+* **GTDD (Generative Test-Driven Development):** [*arXiv:2610.02952*](https://arxiv.org/abs/2610.02952).
+* **Agent Skills Security & Vulnerability Analysis:**
+  * [*Agent Skills Can Be Harmful (arXiv:2608.11888)*](https://arxiv.org/abs/2608.11888)
+  * [*Do Not Mention This to the User: Detecting Malicious Agent Skills in the Wild (USENIX Security 2026 / arXiv:2602.06547)*](https://arxiv.org/abs/2602.06547)
+  * [*Cloud Security Alliance: AI Agent Skill Scanner Bypass*](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-agent-skill-scanner-bypass-20260610-csa/)
